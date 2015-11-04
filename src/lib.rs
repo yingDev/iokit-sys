@@ -158,4 +158,8 @@ extern "C" {
     pub fn IOServiceNameMatching(name: *const c_char) -> CFMutableDictionaryRef;
     pub fn IOBSDNameMatching(masterPort: mach_port_t, options: u32, bsdName: *const c_char) -> CFMutableDictionaryRef;
     pub fn IORegistryEntryIDMatching(entryID: u64) -> CFMutableDictionaryRef;
+
+    // IOPMLib.h
+
+    pub fn IORegisterForSystemPower(refcon: *mut c_void,thePortRef: *mut IONotificationPortRef, callback: IOServiceInterestCallback, notifier: *mut io_object_t);
 }
