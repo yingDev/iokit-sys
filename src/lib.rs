@@ -54,7 +54,7 @@ extern "C" {
     pub fn IONotificationPortCreate(masterPort: mach_port_t) -> IONotificationPortRef;
     pub fn IONotificationPortDestroy(notify: IONotificationPortRef);
     pub fn IONotificationPortGetMachPort(notify: IONotificationPortRef) -> mach_port_t;
-    pub fn IONotificationPortGetRunLoopSource(notify: IONotificationPortRef) -> mach_port_t;
+    pub fn IONotificationPortGetRunLoopSource(notify: IONotificationPortRef) -> IONotificationPortRef;
 
 
     pub fn IOCreateReceivePort(msgType: u32, recvPort: *mut mach_port_t) -> kern_return_t;
