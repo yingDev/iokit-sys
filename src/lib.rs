@@ -17,10 +17,14 @@ use mach::vm_types::{mach_vm_address_t,mach_vm_size_t};
 pub use io_return::*;
 pub use serial::*;
 pub use types::*;
+pub use io_message::*;
+pub use pmlib::*;
 
 mod io_return;
 mod serial;
 mod types;
+mod io_message;
+mod pmlib;
 
 // exports from <IOKit/IOKitLib.h>
 
@@ -161,7 +165,4 @@ extern "C" {
     pub fn IOBSDNameMatching(masterPort: mach_port_t, options: u32, bsdName: *const c_char) -> CFMutableDictionaryRef;
     pub fn IORegistryEntryIDMatching(entryID: u64) -> CFMutableDictionaryRef;
 
-    // IOPMLib.h
-
-    pub fn IORegisterForSystemPower(refcon: *mut c_void,thePortRef: *mut IONotificationPortRef, callback: IOServiceInterestCallback, notifier: *mut io_object_t) -> io_connect_t;
 }
