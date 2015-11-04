@@ -54,6 +54,8 @@ extern "C" {
     pub fn IONotificationPortCreate(masterPort: mach_port_t) -> IONotificationPortRef;
     pub fn IONotificationPortDestroy(notify: IONotificationPortRef);
     pub fn IONotificationPortGetMachPort(notify: IONotificationPortRef) -> mach_port_t;
+    pub fn IONotificationPortGetRunLoopSource(notify: IONotificationPortRef) -> mach_port_t;
+
 
     pub fn IOCreateReceivePort(msgType: u32, recvPort: *mut mach_port_t) -> kern_return_t;
 
@@ -161,5 +163,5 @@ extern "C" {
 
     // IOPMLib.h
 
-    pub fn IORegisterForSystemPower(refcon: *mut c_void,thePortRef: *mut IONotificationPortRef, callback: IOServiceInterestCallback, notifier: *mut io_object_t);
+    pub fn IORegisterForSystemPower(refcon: *mut c_void,thePortRef: *mut IONotificationPortRef, callback: IOServiceInterestCallback, notifier: *mut io_object_t) -> io_connect_t;
 }
