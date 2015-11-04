@@ -112,3 +112,33 @@ pub const kTickScale:         c_int = (kSecondScale / 100);
 pub const kIOConnectMethodVarOutputSize: c_int = -3;
 
 pub type IODeviceNumber = c_uint;
+
+// IOMessage
+pub const kIOMessageServiceIsTerminated: c_int = 0xe0000010;
+pub const kIOMessageServiceIsSuspended: c_int = 0xe0000020;
+pub const kIOMessageServiceIsResumed: c_int = 0xe0000030;
+pub const kIOMessageServiceIsRequestingClose: c_int = 0xe0000100;
+pub const kIOMessageServiceIsAttemptingOpen: c_int = 0xe0000101;
+pub const kIOMessageServiceWasClosed: c_int = 0xe0000110;
+pub const kIOMessageServiceBusyStateChange: c_int = 0xe0000120;
+pub const kIOMessageConsoleSecurityChange: c_int = 0xe0000128;
+pub const kIOMessageServicePropertyChange: c_int = 0xe0000130;
+pub const kIOMessageCopyClientID: c_int = 0xe0000330;
+pub const kIOMessageSystemCapabilityChange: c_int = 0xe0000340;
+pub const kIOMessageDeviceSignaledWakeup: c_int = 0xe0000350;
+pub const kIOMessageDeviceWillPowerOff: c_int = 0xe0000210;
+pub const kIOMessageDeviceHasPoweredOn: c_int = 0xe0000230;
+pub const kIOMessageSystemWillPowerOff: c_int = 0xe0000250;
+pub const kIOMessageSystemWillRestart: c_int = 0xe0000310;
+pub const kIOMessageSystemPagingOff: c_int = 0xe0000255;
+pub const kIOMessageCanSystemSleep: c_int = 0xe0000270;
+pub const kIOMessageSystemWillNotSleep: c_int = 0xe0000290;
+pub const kIOMessageSystemWillSleep: c_int = 0xe0000280;
+pub const kIOMessageSystemWillPowerOn: c_int = 0xe0000320;
+pub const kIOMessageSystemHasPoweredOn: c_int = 0xe0000300;
+pub const kIOMessageCanDevicePowerOff: c_int = 0xe0000200;
+pub const kIOMessageDeviceWillNotPowerOff: c_int = 0xe0000220;
+pub const kIOMessageSystemWillNotPowerOff: c_int = 0xe0000260;
+pub const kIOMessageCanSystemPowerOff: c_int = 0xe0000240;
+pub const kIOMessageDeviceWillPowerOn: c_int = 0xe0000215;
+pub const kIOMessageDeviceHasPoweredOff: c_int = 0xe0000225;
