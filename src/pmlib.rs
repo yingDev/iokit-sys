@@ -1,4 +1,5 @@
- // IOKit/IOPMLib.h
+ // IOKit/pwr_mgt/IOPMLib.h
+ 
 use libc::{c_void};
 use types::*;
 use super::{IONotificationPortRef, IOServiceInterestCallback};
